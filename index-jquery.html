@@ -102,7 +102,19 @@
   </div>
 
   <script>
-  	// JavaScript here...
+
+  function toggleDone() {
+    var checkbox = this;
+
+    $(checkbox).parent().toggleClass("completed");
+    }
+
+
+
+    $(document).ready(function() { // guarantee that all checkboxes are loaded before executing function
+      $("input[type=checkbox]").bind('change', toggleDone);
+    });
+
   </script>
 </body>
 </html>
