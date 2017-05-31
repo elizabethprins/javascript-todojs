@@ -109,7 +109,7 @@
     $(checkbox).parent().toggleClass("completed");
     }
 
-
+    $("#total-count").html($(".todo").length);
 
     $(document).ready(function() { // guarantee that all checkboxes are loaded before executing function
       $("input[type=checkbox]").bind('change', toggleDone);
